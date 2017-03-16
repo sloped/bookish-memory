@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Surviving Javascript</title>
+        <meta name="author" content="name">
+        <meta name="description" content="description here">
+        <meta name="keywords" content="keywords,here">
+        <link href="/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container">
+        <h1>Arrow Functions</h1>
+        <pre><code>
+            const func = () => {
+                console.log(x);
+            };
+            func();
+        </code></pre>
+        <h1>Array Prototypes</h1>
+        <pre><code>
+            let array = [{key:'1'}, {key:'2'}, {key:'3'}, {key:'4'}, {key: 'x'}];
+
+            console.log( 'Find :', a.find(function(item) {
+                return item.key === '3';
+            }).key);
+
+
+            console.log( 'Find Index :', a.findIndex(function(item) {
+                return item.key === 'x';
+            }));
+        </code></pre>
+        <h1>Template Literals</h1>
+        <pre><code>
+            let new_text = document.createTextNode(`Multiple Line
+            Text
+            Without
+            + signs`);
+
+            document.body.appendChild(new_text);
+        </code></pre>
+        <h1>Destructuring</h1>
+        <pre><code>
+            let object_args = {test: 'value', number: 10, bool: false};
+
+            function destructured({test, bool}) {
+
+                console.log(test, false);
+            }
+
+            destructured(object_args);
+        </code></pre>
+
+        
+        <h1>Default Arguments</h1>
+        <pre><code>
+            let def = {x : 'y', text : 'this is text'}
+
+            function defaults(value = 2, others = def) {
+                console.log(value, others);
+            }
+            defaults(3);
+        </code></pre>
+        </div>
+    </body>
+    <script src="index.js"></script>
+</html>
